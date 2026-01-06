@@ -1,0 +1,8 @@
+/* Elementor button icon hover effect */
+selector a svg path {
+  transition: 0.3s;
+}
+
+selector a:hover svg path {
+  stroke: var( --e-global-color-primary );
+}
