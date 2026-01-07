@@ -32,7 +32,6 @@ for Elementor-based WordPress websites.
 - `/css` → Styles
 - `/js` → Scripts
 - `/php` → PHP helpers
-- `/snippets` → Markdown snippet docs
 
 ## License
 MIT
