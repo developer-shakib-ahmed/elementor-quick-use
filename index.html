@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elementor Quick Use</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: tahoma, serif;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    div.button-wrap {
+      width: 100%;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 20px 20px;
+    }
+
+    .btn-gradient {
+      background: linear-gradient(to left, #E23EE3, #693EFE, #E23EE3);
+      background-position: 0% 0%;
+      background-size: 200% 100%;
+      padding: 15px 60px;
+      border-radius: 50px;
+      color: #ffffff81;
+      border: 0px;
+      transition: 0.5s;
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: 0.2px;
+      cursor: pointer;
+      overflow: hidden;
+    }
+
+    .btn-gradient:hover {
+      background-position: 100% 0%;
+    }
+  </style>
+</head>
+<body>
+  <div class="button-wrap">
+    <button class="btn-gradient">Gradient Button</button>
+  </div>
+</body>
+</html>

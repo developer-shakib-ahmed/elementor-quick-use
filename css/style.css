@@ -6,3 +6,24 @@ selector a svg path {
 selector a:hover svg path {
   stroke: var( --e-global-color-primary );
 }
+
+/* Add Button Gradient Hover Animation*/
+.btn-gradient {
+  background: linear-gradient(to left, #E23EE3, #693EFE, #E23EE3);
+  background-position: 0% 0%;
+  background-size: 200% 100%;
+  padding: 15px 100px;
+  border-radius: 50px;
+  color: #ffffff81;
+  border: 0px;
+  transition: 0.5s;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.btn-gradient:hover {
+  background-position: 100% 0%;
+}
