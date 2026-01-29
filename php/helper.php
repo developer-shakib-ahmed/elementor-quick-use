@@ -25,3 +25,39 @@ function parse_id_list(string $ids): array
     )
   );
 }
+
+
+/**
+ * Attempts to locate and load the WordPress environment.
+ *
+ * This function walks up the directory tree starting from the current
+ * file's directory until it finds `wp-load.php`. Once found, it includes
+ * the file to bootstrap WordPress. If WordPress is already loaded
+ * (ABSPATH is defined), the function exits early.
+ *
+ * Useful for custom scripts, cron jobs, or integrations that need access
+ * to WordPress functions outside the normal theme/plugin context.
+ *
+ * @return bool True if WordPress was successfully loaded or already loaded,
+ *              false if `wp-load.php` could not be found.
+ */
+function load_wp()
+{
+  if (defined('ABSPATH')) {
+    return;
+  }
+
+  $dir = __DIR__;
+  while (! file_exists($dir . '/wp-load.php')) {
+    $parent = dirname($dir);
+    if ($parent === $dir) {
+      return false;
+    }
+    $dir = $parent;
+  }
+
+  require_once $dir . '/wp-load.php';
+  return true;
+}
+
+// load_wp();
