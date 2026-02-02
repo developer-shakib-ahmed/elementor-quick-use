@@ -7,6 +7,7 @@ selector a:hover svg path {
   stroke: var( --e-global-color-primary );
 }
 
+
 /* Add Button Gradient Hover Animation*/
 .btn-gradient {
   background: linear-gradient(to left, #E23EE3, #693EFE, #E23EE3);
@@ -26,4 +27,59 @@ selector a:hover svg path {
 
 .btn-gradient:hover {
   background-position: 100% 0%;
+}
+
+
+/* Change placeholder color */
+form input::-webkit-input-placeholder {
+  color: #666;
+  opacity: 1;
+}
+form input::-moz-placeholder {
+  color: #666;
+  opacity: 1;
+}
+form input::-ms-input-placeholder {
+  color: #666;
+  opacity: 1;
+}
+
+
+/* Convert number field to text */
+form input {
+  -moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+/* Bounce Effect */
+a:hover:before{
+  transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.15);
+}
+
+
+/*
+* WordPress Default Spinner - Preloader
+*/
+
+.spinner {
+  background: url(/wp-admin/images/spinner.gif) no-repeat;
+  background-size: 20px 20px;
+  display: inline-block;
+  visibility: hidden;
+  float: none;
+  vertical-align: middle;
+  opacity: .7;
+  width: 20px;
+  height: 20px;
+  margin: 4px 10px 0;
+}
+
+.is-active.spinner {
+  visibility: visible;
 }
