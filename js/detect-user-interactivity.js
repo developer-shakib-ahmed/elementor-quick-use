@@ -15,10 +15,10 @@
  * - scroll
  * - touchstart
  *
- * Author: Your Name
+ * Author: Shakib Ahmed
  * Version: 1.0.0
  * Created: 2026-02-22
- * License: MIT (or your preferred license)
+ * License: MIT
  * ------------------------------------------------------------
  */
 jQuery(function ($) {
