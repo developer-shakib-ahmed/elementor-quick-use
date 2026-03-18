@@ -1,0 +1,57 @@
+/**
+ * News Ticker Animation for Elementor Loop Grid
+ * ---------------------------------------------
+ * This CSS transforms the Elementor Loop Grid into a horizontal
+ * scrolling news ticker (marquee-style animation).
+ *
+ * Features:
+ * - Continuous horizontal scrolling animation
+ * - Smooth linear motion using CSS keyframes
+ * - Pause animation on hover for better readability
+ * - Prevents content wrapping for seamless ticker effect
+ *
+ * How It Works:
+ * - The container (.elementor-widget-container) hides overflow
+ *   and ensures all items stay in a single line.
+ * - The loop container (.elementor-loop-container) is displayed
+ *   as an inline flex row and animated using translateX.
+ * - The animation moves content from 0 to -50% to create a
+ *   continuous scrolling illusion (requires duplicated content
+ *   for seamless looping).
+ * - Hovering pauses the animation for user interaction.
+ *
+ * Requirements:
+ * - Elementor Loop Grid widget
+ * - Duplicate loop items (or dynamic duplication) for smooth looping
+ *
+ * Customization:
+ * - Adjust animation speed by changing `30s` in `animation`
+ * - Modify scroll distance in `translateX(-50%)` if needed
+ *
+ * Author: Shakib Ahmed
+ * Version: 1.0
+ * License: MIT
+ */
+
+selector .elementor-widget-container {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+selector .elementor-loop-container {
+  display: inline-flex;
+  animation: tickerMove 30s linear infinite;
+}
+
+selector .elementor-loop-container:hover {
+  animation-play-state: paused;
+}
+
+@keyframes tickerMove {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
